@@ -1,11 +1,12 @@
-import { Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
+import Login from './pages/Login';
 
 function App() {
   return (
     <Switch>
-      {/* <Route exact path="/" component={  } />
-      <Route path="/carteira" component={  } /> */}
+      <Route exact path="/" component={ Login } />
+      {/* <Route path="/carteira" component={  } /> */}
 
     </Switch>
   );
