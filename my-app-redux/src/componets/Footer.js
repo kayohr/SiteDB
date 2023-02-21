@@ -6,8 +6,7 @@ import loginContext from '../context/LoginContext';
 //   }
 
 function Footer() {
-  const { themeColor } = useContext(loginContext);
-  return <footer>Tema Atual: {themeColor.color}</footer>;
-}
+  const  themeColor  = useContext(loginContext);
+  return <footer className={themeColor.color}>Tema Atual: {themeColor.color}</footer>;}
 
 export default Footer;

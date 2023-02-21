@@ -1,15 +1,20 @@
-// import React, { useState } from 'react'
-// import { Text, View } from 'react-native'
-// // import { useDispatch, useSelector } from 'react-redux';
+// import React, { useContext } from 'react';
+// import LoginContext from '../context/LoginContext';
 
+// function Header() {
+//   const theme = useContext(LoginContext);
+//     // function toggleTheme() {
+//     //   setXablau(xablau === 'dark' ? 'light' : 'dark');
+//     // }
 
-// export default function Login() {
-//     // const [user, setUser] = useState('');
-//     // const dispatch = useDispacth();
-//     // const __ = useSelector(); //pode por callback do que quero puxar
 //   return (
-//     <View>
-//       <Text>Login</Text>
-//     </View>
-//   )
+//     <header>
+//       <h1>Trybe</h1>
+//       <button onClick={() => theme.toggleTheme()}>
+//         {theme.color === 'dark' ? '☀️' : '🌒'}
+//       </button>
+//     </header>
+//   );
 // }
+
+// export default Header;

@@ -7,7 +7,7 @@ export default function LoginProvider({children}){
     
 
     // function toggleTheme() {
-    //   setThemeColor(themeColor === 'dark' ? 'light' : 'dark');
+    //   setXablau(xablau === 'dark' ? 'light' : 'dark');
     // }
     
     const value = useMemo(() => ({
@@ -19,7 +19,7 @@ export default function LoginProvider({children}){
     <LoginContext.Provider value={ value }>
         <div className={ xablau }>
         {children}
-
+        {/* {toggleTheme} */}
         </div>
     </LoginContext.Provider>
 )
