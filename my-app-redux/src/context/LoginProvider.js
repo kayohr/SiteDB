@@ -1,26 +1,31 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import LoginContext from './LoginContext';
 
 export default function LoginProvider({children}){
     // const [data, setData] = useState([ '']);
     const [xablau, setXablau] = useState('dark');
-    
+    console.log(xablau);
 
     // function toggleTheme() {
     //   setXablau(xablau === 'dark' ? 'light' : 'dark');
     // }
     
+    useEffect(() => {
+        document.body.className = xablau;
+      }, [xablau]);
+
     const value = useMemo(() => ({
         xablau,
-        setXablau
+        setXablau,
+        toggleTheme: () => setXablau(xablau === 'dark' ? 'light' : 'dark')
     }), [xablau, setXablau]) 
     
     return (
     <LoginContext.Provider value={ value }>
-        <div className={ xablau }>
+        <body className={ xablau }>
         {children}
         {/* {toggleTheme} */}
-        </div>
+        </body>
     </LoginContext.Provider>
 )
 }

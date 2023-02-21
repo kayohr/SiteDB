@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -14,7 +13,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -23,9 +22,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -36,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 
 body {
@@ -98,12 +97,50 @@ footer {
   box-sizing: border-box;
   transition: all 500ms;
 }
-
-.light footer {
-  background-color: #333;
-  color: white;
+body.dark {
+  background-color: black !important;
+  color: white !important;
+}
+body.light {
+  background-color: white !important;
+  color: black !important;
 }
 
-.dark footer {
-  background-color: black;
+/* 
+.login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.login-form button {
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #5ba6cb;
+} */
