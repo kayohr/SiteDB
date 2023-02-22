@@ -144,3 +144,57 @@ body.light {
 .login-form button:hover {
   background-color: #5ba6cb;
 } */
+
+.coracao {
+  width: 100px;
+  height: 85px;
+  position: relative;
+  transform: rotate(135deg);
+  animation: batimento 1s ease-in-out infinite;
+}
+
+.coracao:before,
+.coracao:after {
+  content: "";
+  width: 56px;
+  height: 79px;
+  background: red;
+  position: absolute;
+  transform: rotate(-4deg);
+  border-radius: 25px 25px 0 0;
+}
+
+.coracao:before {
+  top: 0;
+  left: 0;
+}
+
+.coracao:after {
+  top: 34px;
+  left: 10;
+  width: 48px;
+  height: 35px;
+  transform: rotate(85deg);
+
+}
+
+@keyframes batimento {
+  0% {
+    transform: scale(1) rotate(-45deg);
+  }
+  20% {
+    transform: scale(0.9) rotate(-45deg);
+  }
+  40% {
+    transform: scale(1) rotate(-45deg);
+  }
+  60% {
+    transform: scale(0.9) rotate(-45deg);
+  }
+  80% {
+    transform: scale(1) rotate(-45deg);
+  }
+  100% {
+    transform: scale(1) rotate(-45deg);
+  }
+}
