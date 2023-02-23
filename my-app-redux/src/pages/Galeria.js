@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import LoginContext from '../context/LoginContext';
 import { MdNightsStay } from 'react-icons/md';
 import { FaSun } from 'react-icons/fa';
+import CarouselPag from '../componets/Carousel';
 
 
 
@@ -13,16 +14,11 @@ export default function Galeria() {
 
   return (
       <>
-      <div>Galeria</div>
       <div class="coracao"></div>
+            <div className='container'>
 
-    <button
-    onClick={() => { toggleTheme(); }}
-    type="button"
-  >
-    {xablau === 'dark' ? '🌞' : '🌒'}
-  </button>
-  <footer>
+      <div className='item'>Galeria</div>
+<section className='item'>
     <NavLink 
     to="/noite" 
     activeClassName="active">
@@ -35,8 +31,19 @@ export default function Galeria() {
     <FaSun />
 
     </NavLink>
-      </footer>
-      
+    </section>
+    <button
+    onClick={() => { toggleTheme(); }}
+    type="button"
+  >
+    {xablau === 'dark' ? '🌞' : '🌒'}
+  </button>
+  </div>
+      <br></br>
+    <body>
+  
+    <CarouselPag />      
+    </body>
   </>
   )
 }

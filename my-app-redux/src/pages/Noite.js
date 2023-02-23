@@ -11,13 +11,14 @@ export default function Noite() {
           >
     <AiOutlineRollback />
             </NavLink>
-    {/* <body class="night-page">
+    <body class="night-page">
 
      <body className="noite" />
-</body> */}
-{/* <div class="night-page">
+</body> 
+ <div class="night-page">
   <div class="moon"></div>
-</div> */}
+</div>
+
     </>
   )
 }

@@ -5,6 +5,8 @@ import App from './App';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import LoginContext from './context/LoginProvider'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 ReactDOM
