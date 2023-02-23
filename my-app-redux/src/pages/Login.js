@@ -10,6 +10,7 @@ export default function Login() {
   const [login, setLogin] = useState({ value: '' });
   const [load, setLoad] = useState(false);
   const [disabled, setDisabled] = useState(true);
+  // const [sessionTimeout, setSessionTimeout] = useState(false);
 
   const handleChange = event => {
     setLogin({ value: event.target.value });
@@ -33,32 +34,40 @@ export default function Login() {
 
   return (
     <form>
-      
-      {load ? (
-        <p>Loading...</p>
-      ) : (
-        <input
-          className="fonte"
-          placeholder="Digite o seu nome aqui"
-          name="login"
-          type="text"
-          onChange={handleChange}
-          value={login.value}
-        />
-      )}
+  <div className="container">
+    {load ? (
+      <p className='loading'>Loading...</p>
+    ) : (
+      <input
+        className="login"
+        placeholder="Digite o seu nome aqui"
+        name="login"
+        type="text"
+        onChange={handleChange}
+        value={login.value}
+       
+      />
+    )}
+    <div className="darkmode">
       <button
-        disabled={disabled}
-        onClick={validationButton}
+        onClick={() => {
+          setLoad(false);
+          toggleTheme();
+        }}
         type="button"
       >
-        Entrar
+        {xablau === "dark" ? "🌞" : "🌒"}
       </button>
-      <button
-  onClick={() => { setLoad(false); toggleTheme(); }}
-  type="button"
->
-  {xablau === 'dark' ? '🌞' : '🌒'}
-</button>
-    </form>
+    </div>
+    <button
+      className="login"
+      disabled={disabled}
+      onClick={validationButton}
+      type="button"
+    >
+      Entrar
+    </button>
+  </div>
+</form>
   );
-};
+}

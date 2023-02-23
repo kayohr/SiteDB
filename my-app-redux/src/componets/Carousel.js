@@ -1,5 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import imag1 from '../Image/imag1.jpeg';
+import imag2 from '../Image/imag2.jpeg';
+import imag3 from '../Image/imag3.jpeg';
+
+
 
 export default function CarouselPag() {
   return (
@@ -7,35 +12,36 @@ export default function CarouselPag() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400/000000/FFFFFF?text=First+slide"
+          src={imag1}
           alt="First slide"
+          //  style={{ width: 800, height: 800 }}
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>First Photo </h3>
+          <p>Uma vida alegre ao seu lado, é o que mais quero e busco para mim!</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400/000000/FFFFFF?text=Second+slide"
+          src={imag2}
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Second Photo</h3>
+          <p>Que na próxima, seja um vestido de noiva e um terno.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://via.placeholder.com/800x400/000000/FFFFFF?text=Third+slide"
+          src={imag3}
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Third Photo</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            Por mais fotos assim, que sejam fotos de nossas futuras viagens, porém, que seja quando finalmente estivermos juntos de vez!
           </p>
         </Carousel.Caption>
       </Carousel.Item>

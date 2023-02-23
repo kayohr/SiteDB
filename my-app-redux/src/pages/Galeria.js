@@ -15,7 +15,7 @@ export default function Galeria() {
   return (
       <>
       <div class="coracao"></div>
-            <div className='container'>
+            <div className='container2'>
 
       <div className='item'>Galeria</div>
 <section className='item'>
@@ -38,12 +38,11 @@ export default function Galeria() {
   >
     {xablau === 'dark' ? '🌞' : '🌒'}
   </button>
+
   </div>
       <br></br>
-    <body>
-  
-    <CarouselPag />      
-    </body>
+  <CarouselPag />      
+
   </>
   )
 }
