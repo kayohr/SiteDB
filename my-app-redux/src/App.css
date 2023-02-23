@@ -198,3 +198,88 @@ body.light {
     transform: scale(1) rotate(-45deg);
   }
 }
+
+
+/**/
+
+/* noite.css */
+
+/* body.noite {
+  background: #000000;
+}
+
+body.noite::before, body.noite::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./Image/coração.gif');
+  animation: piscar 1s ease-in-out infinite;
+}
+
+body.noite::before {
+  z-index: -1;
+}
+
+body.noite::after {
+  z-index: -2;
+}
+
+@keyframes piscar {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+body.night-page::before,
+body.night-page::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./Image/coração.gif');
+  animation: piscar 1s ease-in-out infinite;
+  background-position: center 100px;
+}
+
+body.night-page::before {
+  z-index: -1;
+}
+
+body.night-page::after {
+  z-index: -2;
+} */
+
+
+.night-page {
+  position: relative;
+  background-color: #0c2340;
+}
+
+.moon
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 150px;
+  background-image: url('./Image/lua.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border-radius: 50%;
+  z-index: 1; */
+}
+
+
