@@ -52,6 +52,7 @@ const Dia = () => {
      <div className={`App ${isDarkMode ? 'dark' : ''}`}>
       <button onClick={toggleDarkMode}>Ta escuro, toque 2x para ficar dia!</button>
     </div>
+    <div>Letreiro Digital</div>
       <div className='cs'>Dia</div>
 
       <div className="cs">
