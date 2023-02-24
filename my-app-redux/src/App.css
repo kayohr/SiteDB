@@ -296,3 +296,64 @@ to{
   object-fit: cover;
   /* object-position: center bottom; */
 }
+
+.cs {
+  transform: 
+  rotate(20des)
+  skew(-10deg, -5deg);
+  transition: 
+  translate 0.25s,
+  box-shadow 0.25s;
+}
+.cs:hover {
+  translate: 0 -30px;
+  box-shadow: inset5px 3px rgb(217 220 242 / 75%),
+  10px 6px rgb(44 217 255 / 50%),
+  15px 9px rgb(126 255 178 / 25%);
+}
+
+
+
+.audio-player {
+  margin: 20px 0;
+}
+
+.audio-player audio {
+  width: 100%;
+}
+
+.audio-player audio::-webkit-media-controls-panel {
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 14px;
+}
+
+.audio-player audio::-webkit-media-controls-play-button,
+.audio-player audio::-webkit-media-controls-pause-button {
+  display: block;
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+}
+
+.audio-player audio::-webkit-media-controls-play-button {
+  background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-play-128.png');
+}
+
+.audio-player audio::-webkit-media-controls-pause-button {
+  background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-pause-128.png');
+}
+
+.audio-player audio::-webkit-media-controls-current-time-display,
+.audio-player audio::-webkit-media-controls-time-remaining-display {
+  font-size: 14px;
+  color: #333;
+  margin: 0 10px;
+}
+
+.audio-player audio::-webkit-media-controls-volume-slider,
+.audio-player audio::-webkit-media-controls-mute-button,
+.audio-player audio::-webkit-media-controls-timeline,
+.audio-player audio::-webkit-media-controls-fullscreen-button {
+  display: none;
+}
