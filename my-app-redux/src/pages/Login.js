@@ -48,7 +48,7 @@ export default function Login() {
        
       />
     )}
-    <div className="darkmode cs">
+    <div className="darkmode">
       <button
         onClick={() => {
           setLoad(false);
