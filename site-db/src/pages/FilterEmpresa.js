@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SelectRamo from '../componets/SelectRamo'
 
 const estadosECidades = {
   AC: ["Rio Branco", "Cruzeiro do Sul", "Tarauacá"],
@@ -59,7 +60,19 @@ export default function FilterEmpresa() {
         <section>
           <div>
             <h2>
+            Filtros
+            </h2>
+
               <form>
+                <div>
+                  <p> <strong>SEGMENTO</strong></p>
+                  <label>
+                    <p>Selecione uma ou mais áreas de mercado das Empresas que deseja em sua Lista.</p>
+                    {/* <select>
+                      <option> <SelectRamo /> </option>
+                    </select> */}
+                  </label>
+                </div>
                 <>
                   <select
                     value={estadoSelecionado}
@@ -133,7 +146,6 @@ export default function FilterEmpresa() {
                   </p>
                 </div>
               </form>
-            </h2>
           </div>
         </section>
       </article>
