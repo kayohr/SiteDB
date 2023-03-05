@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import SelectRamo from "../componets/SelectRamo"
+import Boleto from "./Boleto";
+import { useHistory } from 'react-router-dom';
 
 const estadosECidades = {
   AC: ["Rio Branco", "Cruzeiro do Sul", "Tarauacá"],
@@ -36,7 +38,18 @@ export default function FilterEmpresa() {
   const [cidades, setCidades] = useState([]);
   const [cidadeSelecionada, setCidadeSelecionada] = useState("");
   // const [selectedOptions, setSelectedOptions] = useState([]);
+  const [showBoleto, setShowBoleto] = useState(false);
+  const history = useHistory();
 
+  const handleBoletoClick = () => {
+    // Lógica para gerar o boleto
+    history.push('/boleto'); // Navegar para a página de finalização de compra
+  }
+  
+
+  // const handleBoletoClick = () => {
+  //   setShowBoleto(true);
+  // }
   const siglasEstados = Object.keys(estadosECidades);
 
   const handleEstadoChange = (event) => {
@@ -214,6 +227,10 @@ export default function FilterEmpresa() {
 <div class="col-md-5">
 <input class="button special" type="submit" value="Finalizar"/>
 </div>
+<div>
+        <button onClick={handleBoletoClick}>Gerar boleto</button>
+      {showBoleto && <Boleto valor="100" dataVencimento="10/03/2023" codigoBarra="1234567890" />}
+    </div>
 
                 <div>
                   <p>
