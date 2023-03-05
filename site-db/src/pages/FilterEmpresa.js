@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import SelectRamo from '../componets/SelectRamo'
+import SelectRamo from "../componets/SelectRamo"
 
 const estadosECidades = {
   AC: ["Rio Branco", "Cruzeiro do Sul", "Tarauacá"],
@@ -35,6 +35,7 @@ export default function FilterEmpresa() {
   const [estadoSelecionado, setEstadoSelecionado] = useState("");
   const [cidades, setCidades] = useState([]);
   const [cidadeSelecionada, setCidadeSelecionada] = useState("");
+  // const [selectedOptions, setSelectedOptions] = useState([]);
 
   const siglasEstados = Object.keys(estadosECidades);
 
@@ -50,6 +51,12 @@ export default function FilterEmpresa() {
     const cidade = event.target.value;
     setCidadeSelecionada(cidade);
   };
+
+  // const handleRamoChange = (values) => {
+  //   setSelectedOptions(values);
+  // }
+
+
   return (
     <div>
       <header>
@@ -64,15 +71,12 @@ export default function FilterEmpresa() {
             </h2>
 
               <form>
-                <div>
-                  <p> <strong>SEGMENTO</strong></p>
-                  <label>
-                    <p>Selecione uma ou mais áreas de mercado das Empresas que deseja em sua Lista.</p>
-                    {/* <select>
-                      <option> <SelectRamo /> </option>
-                    </select> */}
-                  </label>
-                </div>
+              
+              <div>
+      <h1>Selecione as áreas de mercado:</h1>
+      <SelectRamo />
+    </div>
+
                 <>
                   <select
                     value={estadoSelecionado}
@@ -139,7 +143,78 @@ export default function FilterEmpresa() {
                   <label htmlFor="todasCidades">Todas as Cidades</label>
                 </p>
                 <span></span>
-                <label for></label>
+<br></br>
+<div class="box_Form">
+<label for="qtdregistros"><font id="step5" color="#e16a5a">QUANTIDADE DE EMPRESAS:</font></label>
+<p>Defina a quantidade de Empresas que deseja na sua Lista.</p>
+
+<select id="qtdregistros" name="qtdregistros" class="form-control">
+<option value="12000">Selecione a quantidade de Empresas</option>
+<option value="1000">Até 1.000 empresas = R$27,00</option>
+<option value="2000">Até 2.000 empresas = R$44,00</option>
+<option value="4000">Até 4.000 empresas = R$61,00</option>
+<option value="8000">Até 8.000 empresas = R$79,00</option>
+<option value="12000">Até 12.000 empresas = R$97,00</option>
+<option value="16000">Até 16.000 empresas = R$124,00</option>
+<option value="20000">Até 20.000 empresas = R$164,00</option>
+<option value="30000">Até 30.000 empresas = R$184,00</option>
+<option value="40000">Até 40.000 empresas = R$199,00</option>
+<option value="50000">Até 50.000 empresas = R$210,00</option>
+<option value="70000">Até 70.000 empresas = R$242,00</option>
+<option value="100000">Até 100.000 empresas = R$266,00</option>
+<option value="150000">Até 150.000 empresas = R$306,00</option>
+<option value="200000">Até 200.000 empresas = R$344,00</option>
+<option value="300000">Até 300.000 empresas = R$380,00</option>
+<option value="400000">Até 400.000 empresas = R$450,00</option>
+<option value="500000">Até 500.000 empresas = R$539,00</option>
+</select>
+</div>
+<br></br>
+                <div>
+  <label for="checkboxes">
+    <span>SOMENTE EMPRESAS COM</span>
+  </label>
+  <input 
+    type="checkbox"
+    name="checkboxes-0"
+    id="checkboxes-0"
+    value="1"
+  />
+  <label for="checkboxes-0">
+    E-mail cadastrado
+  </label>
+
+  <input
+    type="checkbox"
+    name="checkboxes-1"
+    id="checkboxes-1"
+    value="2"
+  />
+  <label for="checkboxes-1">
+    Endereço cadastrado
+  </label>
+
+  <input
+    type="checkbox"
+    name="checkboxes-2"
+    id="checkboxes-2"
+    value="3"
+  />
+  <label for="checkboxes-2">
+    Telefone cadastrado
+  </label>
+</div>
+<br></br>
+<div class="box_Form">
+<label for="email"><font id="step6" color="#e16a5a">E-MAIL:</font></label>
+<p>Preencha o E-mail que vamos utilizar para enviar a Lista, após confirmação do pagamento.</p>
+<input autocomplete="new-password" id="email" name="email" type="email" placeholder="Digite o seu melhor E-mail" class="form-control sel" required="" />
+</div>
+ 
+<div class="col-md-5">
+<input class="button special" type="submit" value="Finalizar"/>
+</div>
+
                 <div>
                   <p>
                     <strong></strong>
