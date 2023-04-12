@@ -18,7 +18,7 @@ export default function CarouselPag() {
         />
         <Carousel.Caption>
           <h3>First Photo </h3>
-          {/* <p>Uma vida alegre ao seu lado, é o que mais quero e busco para mim!</p> */}
+          {/* <p></p> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -29,7 +29,7 @@ export default function CarouselPag() {
         />
         <Carousel.Caption>
           <h3>Second Photo</h3>
-          {/* <p>Que na próxima, seja um vestido de noiva e um terno.</p> */}
+          {/* <p>.</p> */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -41,7 +41,7 @@ export default function CarouselPag() {
         <Carousel.Caption>
           <h3>Third Photo</h3>
           <p>
-            {/* Por mais fotos assim, que sejam fotos de nossas futuras viagens, porém, que seja quando finalmente estivermos juntos de vez! */}
+            {/*  */}
           </p>
         </Carousel.Caption>
       </Carousel.Item>
